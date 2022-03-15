@@ -38,3 +38,4 @@ leftButton.addEventListener(
   "click",
   () => (foodMenuItemsContainer.scrollLeft -= 300)
 );
+window.scroll(0, 0);

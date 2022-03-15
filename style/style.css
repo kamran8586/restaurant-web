@@ -10,30 +10,28 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
+:root{
+  --primary: #119c83;
+}
 body {
   font-family: Geneva, Verdana, sans-serif;
   overflow-x: hidden;
 }
 /* ********** Utility Classes */
 .loader {
-  position: relative;
-  top: 0;
-  left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(0, 0, 0);
   z-index: 99999;
   background: url("../images/loader.gif") center no-repeat;
 }
 .loader::after {
   content: "";
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.705);
-  animation: spin 1s linear infinite;
+  background-color: rgba(0, 0, 0, 0.884);
 }
 .container {
   max-width: 1200px;
@@ -59,7 +57,7 @@ body {
 }
 .btn-primary {
   color: #fff;
-  background-color: #119c83;
+  background-color: var(--primary);
   opacity: 0.7;
   transition: all 0.3s;
 }
@@ -311,6 +309,7 @@ a {
 .food-menu-item {
   display: flex;
   flex-direction: column;
+  transition: all 0.3s;
 }
 .food-menu-item-text-heading {
   font-size: 2rem;
@@ -401,16 +400,19 @@ a {
 }
 
 form input,
-textarea,
-form input:focus,
-textarea:focus {
+textarea {
   padding: 1rem;
   border: none;
   border-bottom: 2px solid rgb(155, 155, 155);
   outline: none;
   font-size: 1.5rem;
+  transition: all .2s;
 }
-
+input:focus,
+textarea:focus {
+  border-bottom: 3px solid var(--primary);
+  color: var(--primary);
+}
 textarea {
   height: 130px;
   resize: none;
