@@ -10,7 +10,7 @@ html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
-:root{
+:root {
   --primary: #119c83;
 }
 body {
@@ -18,6 +18,23 @@ body {
   overflow-x: hidden;
 }
 /* ********** Utility Classes */
+
+.top {
+  position: fixed;
+  bottom: 3rem;
+  right: 2rem;
+  z-index: 1;
+  padding: 2rem;
+  border-radius: 50%;
+  cursor: pointer;
+  background-color: var(--primary);
+}
+.top > * {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #fff;
+}
+
 .loader {
   width: 100vw;
   height: 100vh;
@@ -406,7 +423,7 @@ textarea {
   border-bottom: 2px solid rgb(155, 155, 155);
   outline: none;
   font-size: 1.5rem;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 input:focus,
 textarea:focus {
@@ -424,20 +441,84 @@ form > * {
 
 .footer {
   font-size: large;
-  background-color: rgba(112, 112, 112, 0.87);
+  background-color: rgb(37, 37, 37);
   color: #fff;
-  padding: 3rem;
-  display: grid;
-  place-items: center;
   margin-top: 3rem;
-  font-weight: bolder;
+  position: relative;
+  bottom: 0;
+  height: 50vh;
+}
+.deep-footer {
+  font-weight: lighter;
+  padding: 0.2rem 1rem;
+  position: absolute;
+  bottom: 1rem;
+  font-size: 1.5rem;
+}
+.social-media-links a {
+  font-size: 5rem;
+  margin: 0 0.5rem;
+  display: inline-block;
+}
+.social-media-links a {
+  border-radius: 50%;
 }
 
+.social-media-links {
+  position: absolute;
+  bottom: 0;
+  right: 2rem;
+}
+
+.social-media-links a:nth-child(1) {
+  color: #3b5998;
+}
+.social-media-links a:nth-child(2) {
+  color: #1da1f2;
+}
+.social-media-links a:nth-child(3) {
+  color: #0077b5;
+}
+.social-media-links {
+  padding: 1rem;
+}
+
+.quick-links-heading {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin-bottom: 1rem;
+}
+.quick-links-items {
+  margin-bottom: 1rem;
+  position: absolute;
+  right: 1rem;
+}
+.quick-links-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  top: 3rem;
+  padding: 2rem;
+}
+.quick-links-item a {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+  color: #fff;
+}
+.quick-links-items a:hover {
+  color: var(--primary);
+}
+.hr {
+  border: 0.5px solid rgba(163, 163, 163, 0.815);
+  width: 100%;
+  margin-bottom: 1rem;
+  position: absolute;
+  bottom: 6rem;
+}
 /* For Tablet */
 @media (max-width: 1180px) {
   .about-us-content-container {
     flex-direction: column;
-    text-align: center;
     text-align: center;
   }
   .about-us-content-container > * {
