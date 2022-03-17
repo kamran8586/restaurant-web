@@ -565,6 +565,9 @@ form > * {
     height: 30px;
     width: 20px;
   }
+  .food-menu-item img{
+    width: 90vw;
+  }
 }
 /* For Small Devices */
 @media (max-width: 800px) {

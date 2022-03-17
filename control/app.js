@@ -34,12 +34,12 @@ window.onscroll = () => {
 };
 foodMenuItemsContainer.scrollLeft = 0;
 rightButton.addEventListener("click", function (e) {
-  foodMenuItemsContainer.scrollLeft += 300;
+  foodMenuItemsContainer.scrollLeft += 100;
   console.log(e);
 });
 leftButton.addEventListener(
   "click",
-  () => (foodMenuItemsContainer.scrollLeft -= 300)
+  () => (foodMenuItemsContainer.scrollLeft -= 100)
 );
 window.scroll(0, 0);
 goToTop.addEventListener("click", (e) => {
