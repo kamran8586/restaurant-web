@@ -3,6 +3,7 @@ const hamburgerLines = document.querySelector(".hamburger-lines");
 const loader = document.querySelector(".loader");
 const rightButton = document.querySelector(".right-button");
 const leftButton = document.querySelector(".left-button");
+const goToTop =  document.querySelector(".go-to-top");
 const foodMenuItemsContainer = document.querySelector(
   ".food-menu-items-container"
 );
@@ -33,13 +34,14 @@ window.onscroll = () => {
 foodMenuItemsContainer.scrollLeft = 0;
 rightButton.addEventListener("click", function (e) {
   foodMenuItemsContainer.scrollLeft += 300;
+  console.log(e);
 });
 leftButton.addEventListener(
   "click",
   () => (foodMenuItemsContainer.scrollLeft -= 300)
 );
 window.scroll(0, 0);
-top.addEventListener("click", (e) => {
+goToTop.addEventListener("click", (e) => {
   window.scroll(0, 0);
   console.log(e);
 });
