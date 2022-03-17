@@ -3,7 +3,7 @@ const hamburgerLines = document.querySelector(".hamburger-lines");
 const loader = document.querySelector(".loader");
 const rightButton = document.querySelector(".right-button");
 const leftButton = document.querySelector(".left-button");
-const goToTop =  document.querySelector(".go-to-top");
+const goToTop = document.querySelector(".go-to-top");
 const foodMenuItemsContainer = document.querySelector(
   ".food-menu-items-container"
 );
@@ -15,13 +15,14 @@ const hamburgerLinesText = hamburgerLines.innerHTML;
 hamburgerLines.addEventListener("click", (e) => {
   menuItems.classList.toggle("show-nav");
   menuItems.classList.contains("show-nav")
-    ? (hamburgerLines.innerHTML = "&times")
+    ? addCrossIconToHamBurger()
     : (hamburgerLines.innerHTML = hamburgerLinesText);
 });
 
 document.body.addEventListener("click", function (e) {
   if (e.target != this) return;
   menuItems.classList.remove("show-nav");
+  hamburgerLines.innerHTML = hamburgerLinesText;
 });
 setTimeout(() => {
   loader.style.display = "none";
@@ -45,3 +46,9 @@ goToTop.addEventListener("click", (e) => {
   window.scroll(0, 0);
   console.log(e);
 });
+/**
+ * Add Cross Button Icon for rexponsiveness
+ */
+function addCrossIconToHamBurger() {
+  hamburgerLines.innerHTML = "&times";
+}
