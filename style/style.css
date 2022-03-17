@@ -398,6 +398,11 @@ a {
 .contact {
   background-color: rgba(212, 208, 208, 0.808);
 }
+.contact-img img{
+width: 600px;
+  display: block;
+  margin: auto;
+}
 .contact-form {
   margin-left: -80px;
   background-color: #fff;
@@ -577,6 +582,9 @@ form > * {
   }
   .types-of-food {
     margin-top: 50rem;
+  }
+  .contact-img img{
+    width: 100%;
   }
 }
 
